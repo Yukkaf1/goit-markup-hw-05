@@ -89,6 +89,13 @@ img {
 /*Хеадер*/
 .header {
 border-bottom: 1px solid var(--border-color);
+position: fixed;
+top: 0;
+width: 100vw;
+
+background-color: var(--primary-white-color);
+
+z-index: 999;
 }
 
 .header-container {
@@ -128,14 +135,19 @@ border-bottom: 1px solid var(--border-color);
 color: var(--primary-text-color);
 font-weight: 500;
 letter-spacing: 0.02em;
+
+padding-top: 32px;
+padding-bottom: 32px;
+
+z-index: 1000;
 }
 
 .site-nav .item {
 display: flex;
 
+position: relative;
+
 margin-right: 50px;
-padding-top: 32px;
-padding-bottom: 32px;
 }
 
 .site-nav .item:last-child {
@@ -157,6 +169,38 @@ color: var(--accent-color);
 .site-nav .link.current,
 .address-nav .link.current{
     color: var(--accent-color);  
+}
+
+.link.current::after {
+content: "";
+display: block;
+width: 100%;
+height: 4px;
+border-color: var(--accent-color);
+background-color: var(--accent-color);
+border-radius: 2px;
+
+position: absolute;
+bottom: 0;
+left: 0;
+
+}
+
+.site-nav .link:hover::after, 
+.site-nav .link:focus::after
+{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
 }
 
 /*Блок header mailto + tel*/
@@ -404,7 +448,8 @@ line-height: 1.7;
 .services.list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--indent)
+  gap: var(--indent);
+
 }
 
 /*.services.list .item + .item {
@@ -413,7 +458,37 @@ line-height: 1.7;
 
 .services.list .item {
 --items: 3;
+
+position: relative;
+
+display: flex;
+align-content: center;
+justify-content: center;
+
 }
+
+.services.list p {
+color: var(--primary-white-color);
+text-transform: uppercase;
+font-weight: 700;
+font-size: 14px;
+background-color: rgba(47, 48, 58, 0.8);
+
+content: "";
+display: flex;
+align-content: center;
+justify-content: center;
+text-align: center;
+width: 100%;
+height: 70px;
+
+padding-top: 27px;
+position: absolute;
+bottom: 0;
+left: 0;
+}
+
+
 
 /*Секция комнада*/
 .team.section {
@@ -681,3 +756,19 @@ margin-left: 70px;
 .join-link:focus .join-icon {
     fill: var(--primary-white-color);
   }
+
+/*Скролл*/
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+ 
+  width: 50px;
+  height: 50px;
+
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
