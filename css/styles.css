@@ -12,6 +12,8 @@
     --border-color: #ECECEC;
     --icon-color: #AFB1B8;
     --thumb-color: rgba(33, 150, 243, 0.9);
+    --modal-btn-color:  rgba(0, 0, 0, 0.1);
+    --modal-backdrop-color:  rgba(0, 0, 0, 0.2);
 
     /* grid item*/
     --items: 1;
@@ -291,6 +293,60 @@ padding-bottom: 32px;;
   display: flex;
   align-items: baseline;
   
+}
+
+/*Модальное окно*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color:  var(--modal-backdrop-color);
+  opacity: 1;
+
+  width: 100%;
+  height: 100%;
+
+z-index: 1000;
+
+}
+
+.backdrop.is-hidden {
+opacity: 0;
+pointer-events: none;
+}
+
+.modal {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate( -50%, -50%);
+
+min-width: 528px;
+min-height: 581px;
+background-color: var(--primary-white-color);
+
+}
+
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  border: 1px solid var(--modal-btn-color);
+  border-radius: 50%;
+  background-color: transparent;
+
+  cursor: pointer;
 }
 
 /*Секция Герой*/
