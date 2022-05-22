@@ -11,6 +11,7 @@
     --background-color-secondary: #F5F4FA;
     --border-color: #ECECEC;
     --icon-color: #AFB1B8;
+    --thumb-color: rgba(33, 150, 243, 0.9);
 
     /* grid item*/
     --items: 1;
@@ -498,8 +499,6 @@ left: 0%;
 
 }
 
-
-
 /*Секция комнада*/
 .team.section {
   background-color: var(--background-color-secondary);
@@ -633,6 +632,53 @@ box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1p
 transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio-thumb {
+  display: flex;
+  position: relative;
+}
+
+.portfolio-thumb::before {
+content: "";
+width: 100%;
+height: 100%;
+background-color: var(--thumb-color);
+
+position: absolute;
+top: 0;
+left: 0;
+
+opacity: 0;
+
+z-index: 2;
+}
+
+.portfolio-thumb .thumb-text {
+color: var(--primary-white-color);
+font-weight: 400;
+font-size: 18px;
+overflow: auto;
+
+width: 320px;
+height: 168px;
+line-height: 1.6;
+
+position: absolute;
+top: 50%;
+left: 50%;
+
+transform: translate(-50%, -50%);
+
+opacity: 0;
+z-index: 3;
+}
+
+.portfolio-thumb:hover::before,
+.portfolio-thumb:hover .thumb-text {
+  opacity: 1;
+ 
+}
+
+
 /*
 .portfolio.list .item:nth-child(3n){
   margin-right: 0px;
@@ -657,7 +703,7 @@ transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1);
 
   margin-bottom: 4px;
 }
-.portfolio.section p {
+.portfolio.section .card-text {
   color: var(--secondary-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -707,6 +753,7 @@ transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1);
 .clients-link:hover,
 .clients-link:focus {
 border: 1px solid var(--accent-color);
+transition: 250ms border cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover .clients-icon,
@@ -768,6 +815,7 @@ margin-left: 70px;
 .join-link:hover,
 .join-link:focus {
     background-color: var(--accent-color);
+    transition: 250ms background-color cubic-bezier(0.4, 0, 0.2, 1);
   }
   
 .join-link:hover .join-icon,
