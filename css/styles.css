@@ -166,6 +166,8 @@ margin-right: 50px;
 .address-nav .link:hover,
 .address-nav .link:focus{
 color: var(--accent-color);
+
+transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link.current,
@@ -199,6 +201,8 @@ left: 0;
   background-color: var(--accent-color);
   border-radius: 2px;
   
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
+
   position: absolute;
   bottom: 0;
   left: 0;
@@ -237,6 +241,8 @@ padding-bottom: 32px;;
 .link.mailto:hover, 
 .link.tel:hover{
   color: var(--accent-color);
+
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .heder-icons {
@@ -277,6 +283,7 @@ padding-bottom: 32px;;
 .mailto-footer :hover,
 .tel-footer :hover{
   color: var(--accent-color);
+  transition: 250ms color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer.container {
@@ -486,8 +493,9 @@ height: 70px;
 
 padding-top: 27px;
 position: absolute;
-bottom: 0;
-left: 0;
+bottom: 0%;
+left: 0%;
+
 }
 
 
@@ -571,11 +579,13 @@ margin-right: 10px;
 .socials-link:hover,
 .socials-link:focus {
   background-color: var(--accent-color);
+  transition: 250ms background-color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
   fill: var(--primary-white-color);
+  transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*Секция портфолио кнопки-фильтры !!!!!НЕ РАБОТАЕТ центрирование*/
 .filter.list {
@@ -593,6 +603,10 @@ margin-right: 10px;
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 background-color: var(--accent-color);
 color: var(--primary-white-color);
+
+transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1),
+250ms background-color cubic-bezier(0.4, 0, 0.2, 1),
+250ms color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Секции портфолио*/
@@ -616,6 +630,7 @@ color: var(--primary-white-color);
 .portfolio.list .item:hover,
 .portfolio.list .item:focus {
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*
@@ -698,6 +713,7 @@ border: 1px solid var(--accent-color);
 .clients-link:focus .clients-icon{
 
 fill: var(--accent-color);
+transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Секция присоединяйтесь*/
@@ -757,6 +773,7 @@ margin-left: 70px;
 .join-link:hover .join-icon,
 .join-link:focus .join-icon {
     fill: var(--primary-white-color);
+    transition: 250ms fill cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 /*Скролл*/
