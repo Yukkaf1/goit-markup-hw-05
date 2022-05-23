@@ -668,8 +668,8 @@ margin-right: 10px;
 .filter.list .button,
 .filter.list .button {
 transition: 250ms box-shadow cubic-bezier(0.4, 0, 0.2, 1),
-2500ms background-color cubic-bezier(0.4, 0, 0.2, 1),
-2500ms color cubic-bezier(0.4, 0, 0.2, 1);
+250ms background-color cubic-bezier(0.4, 0, 0.2, 1),
+250ms color cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -753,7 +753,7 @@ transform: translate(-50%, -50%);
 
 z-index: 3;
 
-transition: 2500ms top cubic-bezier(0.4, 0, 0.2, 1);
+transition: 250ms top cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio.list .item:hover .portfolio-thumb::before,
@@ -843,7 +843,7 @@ border: 1px solid var(--accent-color);
 
 .clients-icon {
   fill: var(--icon-color);
-  transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1)
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .clients-link:hover .clients-icon,
